@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleSynthesizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="synthesizer">
+            
+            <div class="oscillators">
+                <h2>Oscillator1</h2>
+                <p class="detuneVal1"></p>
+                <input type="range" id="detune1" min="-100" max="100" step="1" value="5">
+                <h2>Oscillator2</h2>
+                <p class="detuneVal2"></p>
+                <input type="range" id="detune2" min="-100" max="100" step="1" value="-5">
+            </div>
+
+            <div class="filter">
+                <h2>Filter</h2>
+                <p class="freqVal"></p>
+                <input type="range" id="freq" min="0" max="22050" value="5000">
+                <p class="qVal"></p>
+                <input type="range" id="q" min="-15" max="15" step="0.1" value="1" />
+            </div>
+
+            <div class="amp">
+                <h2>Amp</h2>
+                <p>Volume</p>
+                <input type="range" id="gain" min="0" max="0.4" value="0.1" step="0.01" />
+            </div>
+        </div>
+
+        <div class="keys">
+            <div>
+                <div class="blackKey">
+                    <div class="key">s</div>
+                    <div class="key">d</div>
+                    <div class="key">g</div>
+                    <div class="key">h</div>
+                    <div class="key">j</div>
+                </div>
+                <div class="whiteKey">
+                    <div class="key">z</div>
+                    <div class="key">x</div>
+                    <div class="key">c</div>
+                    <div class="key">v</div>
+                    <div class="key">b</div>
+                    <div class="key">n</div>
+                    <div class="key">m</div>
+                    <div class="key">,</div>
+                </div>
+            </div>
+        </div>
+
+        <form id="octave">
+            <h2>Octave</h2>
+            <label>
+                <input type="radio" name="octave" value="-12"><span>-1</span>
+            </label>
+            <label>
+                <input type="radio" name="octave" value="0" checked="checked"><span>0</span>
+            </label>
+            <label>
+                <input type="radio" name="octave" value="12"><span>+1</span>
+            </label>
+        </form>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

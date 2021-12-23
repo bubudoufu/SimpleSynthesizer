@@ -1,0 +1,92 @@
+:root {
+  --key-size: 60px;
+}
+main {
+  margin: 0 auto;
+  border-radius: 5px;
+  width: 720px;
+  height: 370px;
+  background: #dbf6e9;
+  user-select: none;
+  position: relative;
+}
+.synthesizer,
+.blackKey,
+.whiteKey,
+.keys {
+  display: flex;
+}
+input {
+  width: 220px;
+  outline: none;
+}
+h2 {
+  font: small-caps bold 24px/1 sans-serif;
+  margin-bottom: 10px;
+}
+p {
+  font: 16px system-ui;
+  margin: 10px;
+}
+span {
+  color: #31326f;
+  font: bold 18px/1 sans-serif;
+  margin: 0 10px;
+}
+.oscillators,
+.filter,
+.amp {
+  margin: 5px;
+  background: #ffc93c;
+  border-radius: 10px;
+  width: 230px;
+}
+.blackKey {
+  margin-left: 32px;
+  color: white;
+}
+.keys {
+  font-size: 24px;
+  text-align: center;
+  line-height: 60px;
+}
+.blackKey .key {
+  width: var(--key-size);
+  height: var(--key-size);
+  margin: 3px;
+  background: #31326f;
+  border-radius: 3px;
+}
+.blackKey .key:nth-child(3) {
+  margin-left: 71px;
+}
+.whiteKey .key {
+  width: var(--key-size);
+  height: var(--key-size);
+  margin: 3px;
+  background: #9ddfd3;
+  border-radius: 3px;
+}
+#octave {
+  width: 150px;
+  line-height: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 20px;
+}
+#octave input {
+  width: 30px;
+  position: relative;
+  right: 5px;
+  top: 15px;
+}
+#octave label {
+  display: block;
+  height: 25px;
+}
+#octave label span {
+  display: block;
+  text-align: center;
+  margin: 0;
+}
